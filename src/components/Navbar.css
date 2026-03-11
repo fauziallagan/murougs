@@ -334,11 +334,9 @@
   }
 
   /* Show mobile menu when open */
-  .navbar.mobile-menu-open {
-    .mobile-menu {
-      display: flex;
-    }
-  }
+.navbar.mobile-menu-open .mobile-menu {
+  display: flex;
+}
 
   .mobile-menu {
     display: none;
