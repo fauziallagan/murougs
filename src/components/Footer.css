@@ -216,3 +216,11 @@
 .footer-section:nth-child(3) {
   animation-delay: 0.2s;
 }
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
