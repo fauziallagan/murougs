@@ -2,10 +2,15 @@ import React from "react";
 import "./Footer.css";
 
 export default function Footer({ setActiveTab }) {
+  const handleNav = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
+          {/* Logo Section */}
           <div className="footer-section">
             <div className="footer-logo">
               <div className="footer-logo-box">
@@ -19,49 +24,76 @@ export default function Footer({ setActiveTab }) {
                   }}
                 />
               </div>
-              <span>Pusat Studi Multimedia dan Robotika - UG </span>
+              <span>Pusat Studi Multimedia dan Robotika - UG</span>
             </div>
+
             <p>
               Your gateway to laboratory schedules, workshops, competitions, and
               everything you need to stay connected with the lab community.
             </p>
           </div>
 
-          {/* Quick Links - WITH NAVIGATION */}
+          {/* Quick Links */}
           <div className="footer-section">
             <h4>Quick Links</h4>
+
             <ul className="footer-links">
               <li>
-                <button onClick={() => setActiveTab("home")}>Home</button>
+                <button
+                  className="footer-link-btn"
+                  onClick={() => handleNav("home")}
+                >
+                  Home
+                </button>
               </li>
+
               <li>
-                <button onClick={() => setActiveTab("schedule")}>
+                <button
+                  className="footer-link-btn"
+                  onClick={() => handleNav("schedule")}
+                >
                   Schedule
                 </button>
               </li>
+
               <li>
-                <button onClick={() => setActiveTab("workshops")}>
+                <button
+                  className="footer-link-btn"
+                  onClick={() => handleNav("workshops")}
+                >
                   Workshops
                 </button>
               </li>
+
               <li>
-                <button onClick={() => setActiveTab("competitions")}>
+                <button
+                  className="footer-link-btn"
+                  onClick={() => handleNav("competitions")}
+                >
                   Competitions
                 </button>
               </li>
+
               <li>
-                <button onClick={() => setActiveTab("aboutus")}>
+                <button
+                  className="footer-link-btn"
+                  onClick={() => handleNav("aboutus")}
+                >
                   About Us
                 </button>
               </li>
             </ul>
           </div>
+
+          {/* Contact */}
           <div className="footer-section">
             <h4>Contact</h4>
+
             <p>
               Have questions? Reach out to the lab administration for any
               inquiries about schedules, workshops, or competitions.
             </p>
+
             <p>
               <strong>Email:</strong> labconnect@university.edu
             </p>
@@ -71,11 +103,13 @@ export default function Footer({ setActiveTab }) {
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="footer-bottom">
           <p>
-            &copy; 2026 Pusat Studi Multimedia dan Robotika - UG. All rights
+            © 2026 Pusat Studi Multimedia dan Robotika - UG. All rights
             reserved.
           </p>
+
           <div className="footer-links-bottom">
             <a href="#privacy">Privacy</a>
             <a href="#terms">Terms</a>
